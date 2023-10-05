@@ -33,6 +33,12 @@ a {
 
 /* defaults end */
 
+header {
+    border: 50px solid transparent;
+    padding: 15px;
+    border-image: url(images/border.png) 100 repeat;
+}
+
 h1 {
     font-family: "findreplace", sans-serif;
     font-weight: 900;
