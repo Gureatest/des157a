@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 1</title>
+</head>
+<body>
+    <h1>Experiment 1</h1>
+
+    <h2>On the web page, right click and click inspect. Once in that window, select the console tab to see the text.</h2>
+
+    <script>
+        for (var i = 0; i < 101; i++) {
+            if ((i % 3) == 0) {
+                console.log (`fizz`)
+            //if i is divided by 3 with no remainder, print fizz
+            } if ((i % 5)== 0 && (i % 3) > 0) {
+                console.log(`buzz`)
+            //if i is divided by 5 with no remainder, but i is divided by 3 with a remainder, print buzz
+            } else {
+                console.log(i)
+            }
+        }
+    </script>
+</body>
+</html>
