@@ -71,7 +71,7 @@ header {
     background-size: contain;
 }
 
-h1 {
+h1, h2 {
     font-family: "findreplace", sans-serif;
     font-weight: 900;
     font-style: normal;
@@ -82,7 +82,7 @@ h1 {
     padding: 10px;
 }
 
-nav ul li {
+.subtitle {
     font-family: "findreplace", sans-serif;
     font-weight: 900;
     font-style: normal;
@@ -93,6 +93,9 @@ nav ul li {
     text-align: center;
 }
 
+nav ul li {
+    padding: 10px;
+}
 nav ul li a {
     background-image: url(images/buttonFill.png);
     background-size: contain;
@@ -227,7 +230,7 @@ footer p a:hover {
         flex-direction: column;
     }
 
-    h1 {
+    h1, h2 {
         font-size: 30px;
     }
 }
@@ -238,14 +241,14 @@ footer p a:hover {
         margin: auto;
         width: 70%;
     }
-
+    
     .headerFill {
         display: flex;
         justify-content: space-around;
         background-image: url(images/headerFillWide.png);
     }
 
-    h1 {
+    h1, h2 {
         font-family: "findreplace", sans-serif;
         font-weight: 900;
         font-style: normal;
