@@ -171,7 +171,6 @@ article {
     grid-template-rows: 1fr;
     grid-column-gap: 20px;
     grid-row-gap: 0px;
-    padding: 20px 0px;
 }
 
 .content {
@@ -198,18 +197,31 @@ p {
     font-family: "findreplace", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 15px;
+    font-size: 20px;
     padding: 5px 0px;
     color: rgb(255, 255, 255);
 }
 
-div a {
+.link {
+    font-family: "findreplace", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 2px 0px rgb(117, 117, 117);
+}
+
+.link:hover {
+    color: rgb(44, 44, 44);
+}
+
+.button a {
     font-family: "findreplace", sans-serif;
     font-weight: 900;
     font-style: normal;
     font-size: 50px;
-    height: 100%;
     text-align: center;
+    height: 100%;
     background-color: aqua;
     grid-area: 1 / 8 / 2 / 9;
     background-image: url(images/buttonFillSmall.png);
@@ -228,7 +240,7 @@ div a {
     transition: transform 150ms;
 }
 
-div a:hover {
+.button a:hover {
     color: rgb(44, 44, 44);
     box-shadow: 0px 5px rgb(215, 215, 215);
     background-color: rgb(255, 255, 255);
