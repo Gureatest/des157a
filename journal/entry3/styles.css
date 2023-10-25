@@ -40,7 +40,8 @@ html {
     background-image: url(images/journalbackground.gif);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center top
+    background-position: center;
+    background-attachment: fixed;
 }
 
 html:hover {
@@ -119,7 +120,9 @@ nav ul li a:hover {
 }
 
 article {
-    margin: 70px 50px;
+    margin-top: 70px;
+    margin-left: 50px;
+    margin-right: 50px;
     display: block;
 }
 
@@ -209,6 +212,7 @@ p {
 
 footer {
     margin: auto;
+    padding: 20px;
 }
 
 footer p,
