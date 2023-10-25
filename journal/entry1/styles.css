@@ -37,52 +37,10 @@ a {
 /* defaults end */
 
 html {
-    background-image: url(images/backgroundAnimate1.png);
+    background-image: url(images/journalbackground.gif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top
-}
-
-@keyframes animate {
-    0% {
-        background-image: url(images/backgroundAnimate1.png);
-    }
-
-    11% {
-        background-image: url(images/backgroundAnimate2.png);
-    }
-
-    22% {
-        background-image: url(images/backgroundAnimate3.png);
-    }
-
-    33% {
-        background-image: url(images/backgroundAnimate4.png);
-    }
-
-    44% {
-        background-image: url(images/backgroundAnimate5.png);
-    }
-
-    55% {
-        background-image: url(images/backgroundAnimate6.png);
-    }
-
-    66% {
-        background-image: url(images/backgroundAnimate7.png);
-    }
-
-    77% {
-        background-image: url(images/backgroundAnimate8.png);
-    }
-
-    88% {
-        background-image: url(images/backgroundAnimate9.png);
-    }
-
-    100% {
-        background-image: url(images/backgroundAnimate1.png);
-    }
 }
 
 html:hover {
@@ -238,7 +196,6 @@ div a:hover {
 
 footer {
     margin: auto;
-    padding: 40px;
 }
 
 footer p,

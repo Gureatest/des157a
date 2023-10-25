@@ -37,13 +37,13 @@ a {
 /* defaults end */
 
 html {
-    background-image: url(images/backgroundAnimate1.png);
+    background-image: url(images/journalbackground.gif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top
 }
 
-@keyframes animate {
+/* @keyframes animate {
     0% {
         background-image: url(images/backgroundAnimate1.png);
     }
@@ -83,7 +83,7 @@ html {
     100% {
         background-image: url(images/backgroundAnimate1.png);
     }
-}
+} */
 
 html:hover {
     animation: animate 1800ms steps(8, end) infinite;
@@ -239,7 +239,6 @@ div a:hover {
 
 footer {
     margin: auto;
-    padding: 40px;
 }
 
 footer p,

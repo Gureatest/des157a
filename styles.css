@@ -156,12 +156,12 @@ footer p a:hover {
 
 @media only screen and (min-width: 700px) {
     html {
-        background-image: url(images/backgroundFull.png);
+        background-image: url(images/sillyjungle.gif);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center top
     }
-
+/* 
     @keyframes animate {
         0% {
             background-image: url(images/backgroundAnimate1.png);
@@ -206,7 +206,7 @@ footer p a:hover {
         100% {
             background-image: url(images/backgroundAnimate11.png);
         }
-    }
+    } */
 
     html:hover {
         animation: animate 1100ms steps(10, end) infinite;
