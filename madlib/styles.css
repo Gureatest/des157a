@@ -36,12 +36,12 @@ a {
 
 /* defaults end */
 
-html {
-    /* background-image: url(#));
+/* html {
+    background-image: url(#));
     background-size: cover;
     background-position: center;
-    image-rendering: pixelated; */
-}
+    image-rendering: pixelated;
+} */
 
 body {
     display: grid;
@@ -51,7 +51,7 @@ body {
     grid-row-gap: 0px;
     background-color: gray;
     width: 95%;
-    animation: fadeIn ease 3s forwards;
+    animation: fadeIn ease 1s forwards;
 }
 
 @keyframes fadeIn {
@@ -68,21 +68,27 @@ body {
     grid-area: 1 / 2 / 2 / 3;
 }
 
-label {
+#input label {
     padding-left: 10px;
     margin-top: 12px;
     text-shadow: 0px 1px rgb(144, 144, 144);
     color: white;
 }
 
-form {
+#input {
+    grid-area: 1 / 2 / 2 / 3;
+    opacity: 1;
+    transition: visibility .3s ease, opacity .3s ease;
+    visibility: visible;
+}
+
+#input form {
     padding: 50px 20px;
     font-family: "findreplace", sans-serif;
     font-weight: 900;
     font-style: normal;
     display: flex;
     flex-direction: column;
-    grid-area: 1 / 2 / 2 / 3;
 }
 
 input,
@@ -100,12 +106,12 @@ select {
     color: white;
 }
 
-select {
+#input select {
     appearance: none;
     cursor: pointer;
 }
 
-option {
+#input option {
     font-family: "findreplace", sans-serif;
     font-weight: 900;
     font-style: normal;
@@ -119,6 +125,68 @@ option {
 }
 
 #send:hover {
+    color: rgb(57, 57, 57);
+    box-shadow: 0px 4px #868686, inset 0px 4px #b4b4b4;
+    text-shadow: 0px 1px black;
+    background-color: rgb(244, 244, 244);
+    transform: translateY(5px);
+    border-color: rgb(255, 255, 255);
+}
+
+#endscreen {
+    visibility: hidden;
+    font-family: "findreplace", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    /* border: 3px solid #FECB65;
+        background-color: #CC902A;
+        box-shadow: 0px 7px #8E5D1C, inset 0px 4px #8E5D1C; */
+    text-shadow: 0px 1px rgb(144, 144, 144);
+    color: white;
+    margin: 50px 0;
+    grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.7fr 0.3fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "madlib madlib"
+        "button reset";
+    opacity: 0;
+    transition: visibility .3s ease, opacity .3s ease;
+}
+
+.madlib {
+    grid-area: madlib;
+}
+
+.button {
+    grid-area: button;
+}
+
+.reset {
+    grid-area: reset;
+}
+
+button {
+    font-family: "findreplace", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    outline: none;
+    padding: 7px;
+    margin: 4px 10px;
+    border: 3px solid #FECB65;
+    background-color: #CC902A;
+    box-shadow: 0px 7px #8E5D1C, inset 0px 4px #8E5D1C;
+    text-shadow: 0px 1px rgb(144, 144, 144);
+    color: white;
+    transition: all 150ms ease;
+    width: 90%;
+    margin: 20px auto 0;
+}
+
+button:hover {
     color: rgb(57, 57, 57);
     box-shadow: 0px 4px #868686, inset 0px 4px #b4b4b4;
     text-shadow: 0px 1px black;

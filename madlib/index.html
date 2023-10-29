@@ -7,57 +7,67 @@
     <link rel="stylesheet" href="https://use.typekit.net/muq2zoo.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>madlibs</title>
+    <script src="script.js" defer></script>
+    <title>madlib</title>
 </head>
 
 <body>
 
     <div id="image"></div>
 
-    <form id="myform">
-        <label for="pet">pick a pet!</label>
-        <select name="pet" id="pet">
-            <option hidden selected>select a pet</option>
-            <option value="cat">cat</option>
-            <option value="dog">dog</option>
-            <option value="bird">bird</option>
-            <option value="rabbit">rabbit</option>
-            <option value="snake">snake</option>
-            <option value="fish">fish</option>
-        </select>
+    <div id="input">
+        <form id="myform">
+            <label for="pet">pick a pet!</label>
+            <select name="pet" id="pet">
+                <option hidden selected>select a pet</option>
+                <option value="cat">cat</option>
+                <option value="dog">dog</option>
+                <option value="bird">bird</option>
+                <option value="rabbit">rabbit</option>
+                <option value="snake">snake</option>
+                <option value="fish">fish</option>
+            </select>
 
-        <label for="noun1">provide a noun</label>
-        <input type="text" id="noun1">
+            <label for="noun1">provide a noun</label>
+            <input type="text" id="noun1">
 
-        <label for="adjective1">provide an adjective</label>
-        <input type="text" id="adjective1">
+            <label for="adjective1">provide an adjective</label>
+            <input type="text" id="adjective1">
 
-        <label for="clothing">pick a clothing item!</label>
-        <select name="clothing" id="clothing">
-            <option hidden selected>select a clothing item</option>
-            <option value="sunglasses">sunglasses</option>
-            <option value="balloon">balloon</option>
-            <option value="cowboyHat">cowboy hat</option>
-            <option value="hairbow">hairbow</option>
-            <option value="crown">crown</option>
-        </select>
+            <label for="clothing">pick a clothing item!</label>
+            <select name="clothing" id="clothing">
+                <option hidden selected>select a clothing item</option>
+                <option value="sunglasses">sunglasses</option>
+                <option value="balloon">balloon</option>
+                <option value="cowboyHat">cowboy hat</option>
+                <option value="hairbow">hairbow</option>
+                <option value="crown">crown</option>
+            </select>
 
-        <label for="verb1">provide a verb</label>
-        <input type="text" id="verb1">
+            <label for="verb1">provide a verb</label>
+            <input type="text" id="verb1">
 
-        <label for="setting">pick a setting!</label>
-        <select name="setting" id="setting">
-            <option hidden selected>select a setting</option>
-            <option value="beach">beach</option>
-            <option value="mall">mall</option>
-            <option value="home">home</option>
-            <option value="forest">forest</option>
-            <option value="desert">desert</option>
-            <option value="snow">snow</option>
-        </select>
+            <label for="setting">pick a setting!</label>
+            <select name="setting" id="setting">
+                <option hidden selected>select a setting</option>
+                <option value="beach">beach</option>
+                <option value="mall">mall</option>
+                <option value="home">home</option>
+                <option value="forest">forest</option>
+                <option value="desert">desert</option>
+                <option value="snow">snow</option>
+            </select>
 
-        <input type="submit" id="send" value="submit">
-    </form>
+            <input type="submit" id="send" value="submit" onclick="submitMadlib()">
+        </form>
+    </div>
+
+    <div id="endscreen">
+        <div id="madlib" class="madlib">
+        </div>
+        <button class="home" id="home" type="button" onclick="home()">home</button>
+        <button class="reset" id="reset" type="button" onclick="resetMadlib()">reset</button>
+    </div>
 </body>
 
 </html>
