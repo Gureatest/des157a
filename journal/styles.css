@@ -42,6 +42,7 @@ html {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    image-rendering: pixelated;
 }
 
 html:hover {
@@ -49,10 +50,23 @@ html:hover {
     /* animation-delay: 10s; */
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 body {
+    padding: 20px;
+    animation: fadeIn ease 3s 1 forwards;
     margin: auto;
     width: 50%;
 }
+
 
 h1 {
     font-family: "findreplace", sans-serif;

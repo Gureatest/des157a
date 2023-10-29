@@ -1,0 +1,128 @@
+/* defaults */
+
+html {
+    scroll-behavior: smooth;
+    background-size: cover;
+    image-rendering: pixelated;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li,
+a {
+    text-decoration: none;
+    display: block;
+}
+
+/* defaults end */
+
+html {
+    /* background-image: url(#));
+    background-size: cover;
+    background-position: center;
+    image-rendering: pixelated; */
+}
+
+body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 0px;
+    background-color: gray;
+    width: 95%;
+    animation: fadeIn ease 3s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#image {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+label {
+    padding-left: 10px;
+    margin-top: 12px;
+    text-shadow: 0px 1px rgb(144, 144, 144);
+    color: white;
+}
+
+form {
+    padding: 50px 20px;
+    font-family: "findreplace", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+input,
+select {
+    font-family: "findreplace", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    outline: none;
+    padding: 7px;
+    margin: 4px 10px;
+    border: 3px solid #FECB65;
+    background-color: #CC902A;
+    box-shadow: 0px 7px #8E5D1C, inset 0px 4px #8E5D1C;
+    text-shadow: 0px 1px rgb(144, 144, 144);
+    color: white;
+}
+
+select {
+    appearance: none;
+    cursor: pointer;
+}
+
+option {
+    font-family: "findreplace", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    outline: none;
+}
+
+#send {
+    transition: all 150ms ease;
+    width: 50%;
+    margin: 20px auto 0;
+}
+
+#send:hover {
+    color: rgb(57, 57, 57);
+    box-shadow: 0px 4px #868686, inset 0px 4px #b4b4b4;
+    text-shadow: 0px 1px black;
+    background-color: rgb(244, 244, 244);
+    transform: translateY(5px);
+    border-color: rgb(255, 255, 255);
+}
