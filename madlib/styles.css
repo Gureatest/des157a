@@ -54,6 +54,10 @@ body {
     padding-top: 5%;
 }
 
+[src='bleh'] {
+    visibility: hidden;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
