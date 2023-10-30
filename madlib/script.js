@@ -58,7 +58,7 @@
         } else {
             myText =
                 `Today is the big day!
-                    The whole crew goes on a road trip to ${setting1}! 
+                    The whole crew goes on a road trip to the ${setting1}! 
                     Of course,
                     with ${name} the ${pet} leading. 
                     To show off their leadership,
