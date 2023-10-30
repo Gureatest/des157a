@@ -13,18 +13,35 @@
 
 <body>
 
-    <div id="image"></div>
+    <div class="visual">
+        <img id="animalSelect">
+        <img id="accessorySelect">
+    </div>
+       
+    <div id="animalLine">
+        <img src="images/birdie.gif" alt="bird flying" height="15%">
+        <img src="images/bunnie.gif" alt="bunny running" height="15%">
+        <img src="images/doggie.gif" alt="dog walking"height="20%">
+        <img src="images/fishie.gif" alt="fish swimming" height="20%">
+        <img src="images/kitty.gif" alt="cat walking" height="20%">
+        <img src="images/duckie.gif" alt="duck walking" height="20%">
+    </div>
+
+    
 
     <div id="input">
         <form id="myform">
+            <label for="name">provide a name</label>
+            <input type="text" id="name">
+
             <label for="pet">pick a pet!</label>
-            <select name="pet" id="pet">
+            <select name="pet" id="pet" onchange="changePet(this)">
                 <option hidden selected>select a pet</option>
-                <option value="cat">cat</option>
-                <option value="dog">dog</option>
+                <option value="cat" id="cat">cat</option>
+                <option value="dog" id="dog">dog</option>
                 <option value="bird">bird</option>
                 <option value="rabbit">rabbit</option>
-                <option value="snake">snake</option>
+                <option value="duck">duck</option>
                 <option value="fish">fish</option>
             </select>
 
@@ -34,29 +51,31 @@
             <label for="adjective1">provide an adjective</label>
             <input type="text" id="adjective1">
 
-            <label for="clothing">pick a clothing item!</label>
-            <select name="clothing" id="clothing">
-                <option hidden selected>select a clothing item</option>
-                <option value="sunglasses">sunglasses</option>
+            <label for="accessory">pick an accessory!</label>
+            <select name="accessory" id="accessory" onchange="changeAccessory(this)">
+                <option hidden selected>select an accessory</option>
+                <!-- <option value="">sunglasses</option> -->
                 <option value="balloon">balloon</option>
-                <option value="cowboyHat">cowboy hat</option>
-                <option value="hairbow">hairbow</option>
+                <!-- <option value="">cowboy hat</option>
+                <option value="">hairbow</option> -->
                 <option value="crown">crown</option>
             </select>
 
-            <label for="verb1">provide a verb</label>
+            <label for="verb1">provide a -ing verb</label>
             <input type="text" id="verb1">
 
-            <label for="setting">pick a setting!</label>
-            <select name="setting" id="setting">
+            <label for="setting1">provide a setting!</label>
+            <input type="setting1" id="setting1">
+            <!-- <select name="setting" id="setting">
                 <option hidden selected>select a setting</option>
                 <option value="beach">beach</option>
                 <option value="mall">mall</option>
-                <option value="home">home</option>
-                <option value="forest">forest</option>
-                <option value="desert">desert</option>
-                <option value="snow">snow</option>
-            </select>
+                <option value="zoo">zoo</option>
+                <option value="theme park">theme park</option>
+            </select> -->
+
+            <label for="adjective2">provide another adjective</label>
+            <input type="text" id="adjective2">
 
             <input type="submit" id="send" value="submit" onclick="submitMadlib()">
         </form>
