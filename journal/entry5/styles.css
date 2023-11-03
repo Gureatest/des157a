@@ -1,0 +1,236 @@
+/* defaults */
+
+html {
+    scroll-behavior: smooth;
+    background-size: cover;
+    image-rendering: pixelated;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li,
+a {
+    text-decoration: none;
+    display: block;
+}
+
+/* defaults end */
+
+html {
+    background-image: url(images/journalbackground.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+html:hover {
+    animation: animate 1800ms steps(8, end) infinite;
+    /* animation-delay: 10s; */
+}
+
+body {
+    margin: auto;
+    width: 50%;
+}
+
+h1 {
+    font-family: "findreplace", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    text-shadow: 0px 2px 0px rgb(117, 117, 117);
+    padding: 80px;
+}
+
+h2 {
+    font-family: "findreplace", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 2px 0px rgb(117, 117, 117);
+}
+
+nav ul {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+}
+
+nav ul li {
+    font-family: "findreplace", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-shadow: 0px 2px 0px rgb(117, 117, 117);
+    font-size: 28px;
+    color: white;
+    text-align: center;
+    flex: 1;
+}
+
+nav ul li a {
+    background-image: url(images/buttonFill.png);
+    background-size: contain;
+    background-repeat: repeat;
+    text-align: center;
+    text-shadow: 0px 2px rgb(125, 125, 125);
+    font-size: 20px;
+    padding: 10px;
+    background-color: #634c44;
+    box-shadow: 0px 10px #634c44;
+    color: white;
+    transition: color 150ms;
+    transition: box-shadow 150ms;
+    transition: background-color 150ms;
+    transition: transform 150ms;
+
+}
+
+nav ul li a:hover {
+    color: rgb(44, 44, 44);
+    box-shadow: 0px 5px rgb(215, 215, 215);
+    background-color: rgb(255, 255, 255);
+    transform: scaleX(1.1) scaleY(1.1);
+    transform: translateY(5px);
+    background-image: none;
+}
+
+article {
+    margin-top: 70px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: block;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+}
+
+.content {
+    grid-area: 1 / 1 / 2 / 8;
+    background-image: url(images/buttonFill.png);
+    background-size: cover;
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgb(106, 82, 68);
+    box-shadow: 0px 10px #6d4e44;
+    color: white;
+}
+
+.date {
+    font-family: "findreplace", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 1px 0px rgb(117, 117, 117);
+}
+
+p {
+    font-family: "findreplace", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    padding: 5px 0px;
+    color: rgb(255, 255, 255);
+}
+
+figcaption {
+    text-align: center;
+}
+
+.link {
+    font-family: "findreplace", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 2px 0px rgb(117, 117, 117);
+}
+
+.link:hover {
+    color: rgb(44, 44, 44);
+}
+
+.button a {
+    font-family: "findreplace", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 50px;
+    text-align: center;
+    height: 100%;
+    background-color: aqua;
+    grid-area: 1 / 8 / 2 / 9;
+    background-image: url(images/buttonFillSmall.png);
+    background-size: contain;
+    background-repeat: repeat;
+    text-align: center;
+    text-shadow: 0px 2px rgb(125, 125, 125);
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgb(106, 82, 68);
+    box-shadow: 0px 10px #634c44;
+    color: white;
+    transition: color 150ms;
+    transition: box-shadow 150ms;
+    transition: background-color 150ms;
+    transition: transform 150ms;
+}
+
+.button a:hover {
+    color: rgb(44, 44, 44);
+    box-shadow: 0px 5px rgb(215, 215, 215);
+    background-color: rgb(255, 255, 255);
+    transform: scaleX(1.1) scaleY(1.1);
+    transform: translateY(5px);
+    background-image: none;
+}
+
+footer {
+    margin: auto;
+    padding: 20px;
+}
+
+footer p,
+a {
+    font-family: "findreplace", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    text-shadow: 0px 2px 0px rgb(117, 117, 117);
+    transition: color 150ms;
+}
+
+footer p a:hover {
+    color: rgb(44, 44, 44);
+}
