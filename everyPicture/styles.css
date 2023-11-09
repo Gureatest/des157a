@@ -1,0 +1,122 @@
+/* defaults */
+
+html {
+    scroll-behavior: smooth;
+    background-size: cover;
+    image-rendering: pixelated;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li,
+a {
+    text-decoration: none;
+    display: block;
+}
+
+/* defaults end */
+
+body {
+    background-color: rgb(110, 110, 110);
+}
+
+header {
+    padding: 50px 0px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-row-gap: 0px;
+    grid-column-gap: 20px;
+    position: relative;
+}
+
+article {
+    position: relative;
+}
+
+img {
+    image-rendering: optimizeQuality;
+    max-width: 400px;
+}
+
+.rope {
+    position: absolute;
+    top: 10%;
+    left: -10%;
+    max-width: 150%;
+    z-index: -2;
+}
+
+.clothesPin1 {
+    position: absolute;
+    top: -90%;
+    left: 0;
+    right: 50%;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+}
+
+.clothesPin2 {
+    position: absolute;
+    top: -90%;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+}
+
+.concert {
+    position: absolute;
+    top: 0%;
+    z-index: -1;
+}
+
+.picture {
+    transition: all 500;
+    position: relative;
+}
+
+@keyframes flipping {
+    0% {
+        transform: translateY(0px);
+        z-index: 0;
+    }
+
+    50% {
+        transform: translateY(90px);
+    }
+
+    100% {
+        transform: translateY(0px);
+        z-index: 2;
+    }
+}
+
+.flip {
+    animation: flipping 1s 1 ease-in-out forwards;
+}
