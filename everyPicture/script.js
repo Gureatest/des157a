@@ -12,62 +12,72 @@
 
     for (let i = 0; i < pictures.length; i++) {
         let picture = pictures[i];
-            let video = videos[i];
+        let video = videos[i];
 
-            //loop to go through the videos in each picture class element to play the video (but it doesnt work)
+        //loop to go through the videos in each picture class element to play the video
 
-            // let AnimateTime;
+        picture.addEventListener("click", function flipPolaroid() {
 
-            picture.addEventListener("click", function flipPolaroid() {
+            //flips polaroid
 
-                //flips polaroid
+            picture.className = "picture"
+            picture.classList.add("flip");
+            //animates with a css animation keyframe
 
-                picture.className = "picture"
-                picture.classList.add("flip");
-                //animates with a css animation keyframe
+            // concert.style.opacity = "0";
+            video.style.display = "block";
+            //brings up the video
+            video.style.opacity = "1";
+            //makes it visible (again)
+            video.play();
+            //plays video
+            video.volume = 0.3;
+            //sets volume so it doesnt destroy the ears of innocent people
+        });
 
-                // concert.style.opacity = "0";
-                video.style.display = "block";
-                //brings up the video
-                video.style.opacity = "1";
-                //makes it visible (again)
-                video.play();
-                //plays video
-                video.volume = 0.3;
-                //sets volume so it doesnt destroy the ears of innocent people
+
+        picture.addEventListener("mouseout", function flipBackPolaroid() {
+
+            picture.classList.replace("flip", "flipBack");
+            //replaces classes for reverse animation
+
+            video.style.display = "none";
+            //hides video
+            // concert.style.opacity = "1";
+            video.style.opacity = "0";
+            //hides video..
+            video.currentTime = 0;
+            //resets video playtime
+            video.pause();
+            //pauses video
+            // }
+        });
+
+        picture.addEventListener("animationend", function () {
+            picture.classList.replace("flipBack", "sway");
+        });
+        //reads when animation ends, and replaces classes
+
+        let options = {
+            root: null,
+            threshold: 0.1,
+            rootMargin: "-100px",
+        };
+        //observer options
+
+        let observer = new IntersectionObserver(callback, options);
+        //creates intersection observer to check when element is on screen
+
+        function callback(entries, observer) {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('sway');
+                    observer.unobserve(entry.target);
+                }
             });
+        }
 
-
-            picture.addEventListener("mouseout", function flipBackPolaroid() {
-
-                // if (picture.classList.contains("flipBack")) {
-                //     AnimateTime = setTimeout(flipBackPolaroid, 30);
-                //     console.log(AnimateTime);
-                // }
-
-                // if (AnimateTime > 50) {
-
-                //this commented section is supposed to start a timeout to determine when the animation is over (750ms) and clears the classes
-
-                picture.classList.replace("flip", "flipBack");
-                //replaces classes for reverse animation
-
-                video.style.display = "none";
-                //hides video
-                // concert.style.opacity = "1";
-                video.style.opacity = "0";
-                //hides video..
-                video.currentTime = 0;
-                //resets video playtime
-                video.pause();
-                //pauses video
-                // }
-            });
-
-            picture.addEventListener("animationend", function() {
-                picture.classList.remove("flipBack");
-            
-            });
+        observer.observe(picture);
 
     }
 }());
