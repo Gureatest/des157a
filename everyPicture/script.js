@@ -67,9 +67,5 @@
                 // }
             });
         }
-
-        function turnAround() {
-            picture.style.transform = "rotate(180deg)"
-        }
     }
 }());
