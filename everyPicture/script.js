@@ -12,9 +12,6 @@
 
     for (let i = 0; i < pictures.length; i++) {
         let picture = pictures[i];
-        //loop to go through each picture class element so each polaroid can animate
-
-        for (let i = 0; i < videos.length; i++) {
             let video = videos[i];
 
             //loop to go through the videos in each picture class element to play the video (but it doesnt work)
@@ -66,6 +63,11 @@
                 //pauses video
                 // }
             });
-        }
+
+            picture.addEventListener("animationend", function() {
+                picture.classList.remove("flipBack");
+            
+            });
+
     }
 }());

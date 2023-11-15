@@ -150,6 +150,10 @@ video {
     transform-origin: preserve-3d;
 }
 
+.picture:hover {
+    transform: scaleY(1.05px);
+}
+
 @keyframes flipping {
     0% {
         transform: translateY(0px);
