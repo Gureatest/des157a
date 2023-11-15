@@ -9,6 +9,8 @@
     const videos = document.querySelectorAll('.vid');
     //selects all .vid class elements into node list
 
+    const interact = document.getElementById('interact');
+
 
     for (let i = 0; i < pictures.length; i++) {
         let picture = pictures[i];
