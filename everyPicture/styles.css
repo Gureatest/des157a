@@ -2,8 +2,6 @@
 
 html {
     scroll-behavior: smooth;
-    background-size: cover;
-    image-rendering: pixelated;
 }
 
 * {
@@ -35,17 +33,30 @@ a {
 }
 
 /* defaults end */
-html {
+
+
+/* html {
     background-image: url(images/background.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+} */
+
+
+html {
+    background-image: url(images/background.png);
+    background-size: 120%;
+    background-position: 120%;
+    background-attachment: fixed;
+    position: relative;
+    transition: background-position 0.5s linear;
 }
 
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
+        background: #ffffff00;
 }
 
 ::-webkit-scrollbar-thumb:hover {

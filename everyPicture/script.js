@@ -75,9 +75,28 @@
                     observer.unobserve(entry.target);
                 }
             });
+            //observes if the object is in the viewport, then stops observing if it does
         }
 
         observer.observe(picture);
-
+        //observes
     }
+
+
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = `${e.clientX}px`;
+        cursor.style.top = `${e.clientY}px`;
+    });
+    //finds mouse cursor position when mouse is moved
+
+
+    document.addEventListener('mousemove', function (e) {
+        const background = document.querySelector('html');
+        const x = (window.innerWidth / 2 - e.pageX) / 10;
+        const y = (window.innerHeight / 2 - e.pageY) / 10;
+        background.style.backgroundPosition = `${x}px ${y}px`;
+    });
+    //moves background based on how far it is from the left/top side of the page
+
+
 }());
