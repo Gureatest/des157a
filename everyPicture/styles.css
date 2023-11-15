@@ -35,13 +35,39 @@ a {
 }
 
 /* defaults end */
+html {
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
 
-body {
-    background-color: rgb(110, 110, 110);
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff00;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bebebe00;
 }
 
 header {
     padding: 50px 0px;
+}
+
+h1 {
+    font-family: "stack-fill", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+    padding: 0px 20px;
+    text-align: center;
+    text-shadow: 5px 0px 5px black;
 }
 
 section {
@@ -51,22 +77,29 @@ section {
     grid-row-gap: 0px;
     grid-column-gap: 20px;
     position: relative;
+    padding-bottom: 70px;
 }
 
 article {
     position: relative;
 }
 
-img {
-    image-rendering: optimizeQuality;
+.polaroids {
+    overflow: scroll;
+    overflow-y: hidden;
+}
+
+.polaroidFrame {
     max-width: 400px;
 }
 
 .rope {
     position: absolute;
-    top: 10%;
-    left: -10%;
-    max-width: 150%;
+    top: 7%;
+    left: -15%;
+    right: 0;
+    bottom: 0;
+    max-width: 120%;
     z-index: -2;
 }
 
@@ -90,15 +123,31 @@ img {
     z-index: 1;
 }
 
-.concert {
+.concert,
+video {
     position: absolute;
-    top: 0%;
+    top: -10%;
+    left: 0%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
     z-index: -1;
+    max-width: 350px;
 }
 
+.vid {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+
 .picture {
-    transition: all 500;
     position: relative;
+    overflow: hidden;
+    top: 3%;
+    transition: all 250ms ease-in-out;
+    transform-origin: preserve-3d;
 }
 
 @keyframes flipping {
@@ -114,9 +163,52 @@ img {
     100% {
         transform: translateY(0px);
         z-index: 2;
+        transform: scale(1.05);
     }
 }
 
 .flip {
-    animation: flipping 1s 1 ease-in-out forwards;
+    animation: flipping .75s 1 ease-in-out forwards;
+}
+
+.flipBack {
+    animation: flippingBack .75s 1 ease-in-out forwards;
+}
+
+@keyframes flippingBack {
+    0% {
+        transform: translateY(0px);
+        z-index: 2;
+        transform: scale(1.05);
+    }
+
+    50% {
+        transform: translateY(90px);
+    }
+
+    100% {
+        transform: translateY(0px);
+        z-index: 0;
+        transform: scale(1.0);
+    }
+}
+
+footer {
+    padding-bottom: 30px;
+}
+
+footer p,
+a {
+    font-family: "stack-fill", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    transition: all 250ms;
+    text-shadow: 5px 0px 5px black;
+}
+
+footer a:hover {
+    color: rgb(44, 44, 44);
 }
