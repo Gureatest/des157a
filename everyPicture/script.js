@@ -5,7 +5,6 @@
     const pictures = document.querySelectorAll(".picture");
     //selects all .picture class elements into node list
 
-    // const concert = document.querySelector(".concert")
     const videos = document.querySelectorAll('.vid');
     //selects all .vid class elements into node list
 
@@ -26,7 +25,6 @@
             picture.classList.add("flip");
             //animates with a css animation keyframe
 
-            // concert.style.opacity = "0";
             video.style.display = "block";
             //brings up the video
             video.style.opacity = "1";
@@ -35,6 +33,7 @@
             //plays video
             video.volume = 0.3;
             //sets volume so it doesnt destroy the ears of innocent people
+            interact.style.opacity = "0";
         });
 
 
@@ -45,7 +44,6 @@
 
             video.style.display = "none";
             //hides video
-            // concert.style.opacity = "1";
             video.style.opacity = "0";
             //hides video..
             video.currentTime = 0;
