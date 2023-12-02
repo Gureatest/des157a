@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="images/coasterLift.gif" as="image" />
+    <link rel="preload" href="images/coasterMenu.png" as="image" />
     <title>Battle Game</title>
 
     <!-- Normalize CSS for Browser Consistency -->
@@ -22,7 +24,7 @@
 <body>
 
     <section id="startMenu">
-        <h1><img src="images/rideTitle.gif" alt="Ride Title Animation" width="50%"></h1>
+        <h1><img src="images/rideTitle.gif" alt="Ride Title Animation" width="500"></h1>
         <p id="clickHere">click to start</p>
 
         <footer>
@@ -33,12 +35,11 @@
         </footer>
     </section>
 
-
     <section id="gameUI">
         <section id="game">
             <div>
-                <img src="images/monster1.png" alt="monster 1" width="300" height="300" id="Billmon">
-                <h2>Billmon's Health</h2>
+                <img src="images/cat.gif" alt="monster 1" id="Kittykat">
+                <h2 class="name">You</h2>
                 <!-- The divs inside the healthbar0 and healthbar1 divs are set to position
             absolute and have a width of 100%. As the game progresses their width is changed to 
             represent the percentage of health they have left. They have 0 and 1 at the end so that
@@ -51,8 +52,8 @@
                 </div>
             </div>
             <div>
-                <img src="images/monster2.png" alt="monster 2" width="300" height="300" id="Glendamon">
-                <h2>Glendamon's Health</h2>
+                <img src="images/dog.gif" alt="monster 2" id="Puppydog">
+                <h2 class="name">Enemy</h2>
                 <div class="health">
                     <div id="healthbar1">
                         <div></div>
@@ -63,10 +64,9 @@
         </section>
         <section id="action">
             <div id="messages">
-                <p>Press the start button to randomly select the first monster to attack!</p>
-                <button id="start">Start Battle!</button>
+                <p></p>
             </div>
-            <button id="attack" class="hidden">Attack!</button>
+            <div id="attack" class="hidden">Attack!</div>
         </section>
     </section>
 

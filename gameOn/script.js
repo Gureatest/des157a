@@ -6,8 +6,16 @@
     const screen = document.querySelector("html");
     const startMenu = document.getElementById("startMenu");
     const gameUI = document.getElementById("gameUI");
+    const twinkle = new Audio('sounds/twinkle.mp3');
+    const punch = new Audio('sounds/punch.mp3');
+    const defense = new Audio('sounds/defense.mp3');
 
-    function fadeOutEffect() {
+    startMenu.addEventListener('click', function () {
+        twinkle.play();
+    });
+
+    startMenu.addEventListener('click', function () {
+
         var fadeEffect = setInterval(function () {
             if (!startMenu.style.opacity) {
                 startMenu.style.opacity = 1;
@@ -18,18 +26,16 @@
                 clearInterval(fadeEffect);
                 startMenu.style.display = "none"; // hide the start menu
                 gameUI.style.display = "block"; // show the game
+                screen.style.backgroundImage = "url('images/coasterLift.gif')";
             }
         }, 200);
-    }
-
-    startMenu.addEventListener('click', fadeOutEffect);
-
+    });
 
     /* Variables needed for interface elements in the HTML */
-    const monster1 = document.querySelector('#Billmon');
-    const monster2 = document.querySelector('#Glendamon');
+    const monster1 = document.querySelector('#Kittykat');
+    const monster2 = document.querySelector('#Puppydog');
     const messages = document.querySelector('#messages');
-    const startBtn = document.querySelector('#start');
+    const startBtn = document.querySelector('#clickHere');
     const attackBtn = document.querySelector('#attack');
 
     /* These variables are assigned later and used to keep track of
@@ -41,7 +47,7 @@
     let defenderIndex;
 
     const gameData = {
-		monsters: ['Billmon', 'Glendamon'],
+		monsters: ['Kittykat', 'Puppydog'],
 		health: [100, 100],
 		attack: [5, 15, 25, 30, 40],
         attackMessage: [
@@ -56,7 +62,7 @@
             'some defense, partial hit', 
             'total defense, no hit!'
         ],
-		index: 0
+        index: 0
 	};
 
     /* this kicks off the game. Note the attack button starts as hidden, and then is
@@ -71,8 +77,8 @@
     });
 
     /* Now that the button is showing, the player can attack */
-    attackBtn.addEventListener('click', monsterAttack );
-
+    attackBtn.addEventListener('click', monsterAttack);
+    
     /* this is where most of the action takes place */
     function monsterAttack(){
         
@@ -96,9 +102,10 @@
 
         // hide the attack button again, until the next turn.
         attackBtn.className = 'hidden';
-
+        
         //put the correct attack class on the attacking monster
         document.querySelector(`#${attacker}`).className = `attack${thisAttack}`;
+        punch.play();
         // put the correct message in the message window
         messages.innerHTML = `<p><strong>${attacker}</strong> has completed ${gameData.attackMessage[thisAttack]}</p>`;
 
@@ -109,6 +116,7 @@
             messages.innerHTML = `<p><strong>${defender}</strong> has ${gameData.defendMessage[thisdDefense]}</p>`;
             // put the correct defense animation on the defending monster
             document.querySelector(`#${defender}`).className = `defend${thisdDefense}`;
+            defense.play();
 
             /* If there is no defense, update the healthbar of the defending monster by subtracting
             total attack from it's current health. If there was partial defense subtract half the
