@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="images/coasterMenu.gif" as="image" />
+    <link rel="preload" href="images/coasterRide.gif" as="image" />
+    <link rel="preload" href="images/map1-2.gif" as="image" />
+    <link rel="preload" href="images/map2-1.gif" as="image" />
+
+    <title>Battle Game</title>
+
+    <!-- Normalize CSS for Browser Consistency -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- My Styles -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <section id="startMenu">
+        <h1><img src="images/rideTitle.gif" alt="ride title animation" width="500"></h1>
+        <p id="clickHere">click to start</p>
+
+        <footer>
+            <p>designed by thalia gu</p>
+            <p><a
+                    href="mailto:&#097;&#108;&#103;&#117;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">algu@ucdavis.edu</a>
+            </p>
+        </footer>
+    </section>
+    <img src="images/transition1.gif" alt="transition animation" id="transition1">
+
+
+    <section id="map">
+        <div id="left"></div>
+        <div id="right"></div>
+    </section>
+    <img src="images/transition2.gif" alt="transition animation" id="transition2">
+
+    <section id="riding">
+        <img id="alert" src="images/alert.png" alt="exclaimation point alert" width="80px">
+    </section>
+    <img src="images/transition3.gif" alt="transition animation" id="transition3">
+
+
+    <section id="gameUI">
+        <section id="game">
+            <div>
+                <img src="images/cat.gif" alt="monster 1" id="Kittykat">
+                <h2 class="name">You</h2>
+                <!-- The divs inside the healthbar0 and healthbar1 divs are set to position
+            absolute and have a width of 100%. As the game progresses their width is changed to 
+            represent the percentage of health they have left. They have 0 and 1 at the end so that
+            they can be easily targeted by JS based on the index value which is either 0 or 1 -->
+                <div class="health">
+                    <div id="healthbar0">
+                        <div></div>
+                    </div>
+                    <p id="monsterhealth0">100%</p>
+                </div>
+            </div>
+            <div>
+                <img src="images/dog.gif" alt="monster 2" id="Puppydog">
+                <h2 class="name">Enemy</h2>
+                <div class="health">
+                    <div id="healthbar1">
+                        <div></div>
+                    </div>
+                    <p id="monsterhealth1">100%</p>
+                </div>
+            </div>
+        </section>
+        <section id="action">
+            <div id="messages">
+                <p></p>
+            </div>
+            <div id="attack" class="hidden">Attack!</div>
+        </section>
+    </section>
+
+
+</body>
+
+</html>
